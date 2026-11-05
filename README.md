@@ -76,7 +76,8 @@ Full RTL-to-GDSII flow with OpenLane 2.3.10 (`openlane/config.json`, 40 ns clock
 | Antenna | 5 remaining violations (from 327) after diode insertion |
 
 Run it: `openlane --design-dir . openlane/config.json` (Docker image `ghcr.io/efabless/openlane2:2.3.10`).
-Quick logic-only synthesis to sky130 cells: `yosys scripts/synth_sky130.ys`.
+Quick logic-only synthesis to sky130 cells: `yosys scripts/synth_sky130.ys`
+(needs `sky130_fd_sc_hd__tt_025C_1v80.lib` in `build/pdk/`).
 
 ## Next steps
 
