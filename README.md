@@ -57,7 +57,11 @@ Noise-free loopback gives 0 bit errors. The hardware BER follows theory from 0 t
 
 ![BER](docs/ber_final.png)
 
-Details: `docs/ber_summary.md`. Constellation: `docs/constellation.png`. Noise: `docs/noise_histogram.png`.
+| Received constellation | Hardware noise generator |
+|---|---|
+| ![Constellation](docs/constellation.png) | ![Noise histogram](docs/noise_histogram.png) |
+
+Details: `docs/ber_summary.md`.
 
 ## Next steps
 
