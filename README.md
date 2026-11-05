@@ -63,8 +63,23 @@ Noise-free loopback gives 0 bit errors. The hardware BER follows theory from 0 t
 
 Details: `docs/ber_summary.md`.
 
+## Chip layout (SkyWater sky130, OpenLane 2)
+
+Full RTL-to-GDSII flow with OpenLane 2.3.10 (`openlane/config.json`, 40 ns clock).
+
+| Item | Result |
+|---|---|
+| Die size | 1.17 mm × 1.18 mm (1.38 mm²) |
+| DRC / LVS | Clean (0 errors) |
+| Timing at 25 MHz | Met at typical (+16.6 ns) and fast corners; slow corner (100 °C, 1.6 V) about 7 ns short |
+| Power (typical) | 0.18 W |
+| Antenna | 5 remaining violations (from 327) after diode insertion |
+
+Run it: `openlane --design-dir . openlane/config.json` (Docker image `ghcr.io/efabless/openlane2:2.3.10`).
+Quick logic-only synthesis to sky130 cells: `yosys scripts/synth_sky130.ys`.
+
 ## Next steps
 
+- Pipeline the longest FFT path so timing also closes at the slow corner.
 - Preamble generator and frame sync in hardware — the Python model has it; the hardware receiver currently relies on the valid signal.
-- sky130 synthesis + timing, then OpenLane RTL-to-GDSII.
 - 16-QAM, pilots and channel equalisation.

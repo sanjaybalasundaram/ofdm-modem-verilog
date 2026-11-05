@@ -1,0 +1,11 @@
+{
+  "DESIGN_NAME": "ofdm_top",
+  "VERILOG_FILES": "dir::rtl/*.v",
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 40,
+  "FP_CORE_UTIL": 40,
+  "PL_TARGET_DENSITY_PCT": 50,
+  "RUN_HEURISTIC_DIODE_INSERTION": true,
+  "DIODE_ON_PORTS": "in",
+  "GRT_ANTENNA_REPAIR_ITERS": 10
+}

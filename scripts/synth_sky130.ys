@@ -1,0 +1,8 @@
+# Synthesise the OFDM modem to SkyWater sky130 standard cells (HD library, typical corner)
+read_verilog rtl/*.v
+synth -top ofdm_top -flatten
+dfflibmap -liberty build/pdk/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -D 10000 -liberty build/pdk/sky130_fd_sc_hd__tt_025C_1v80.lib
+opt_clean
+tee -o build/sky130_stat.txt stat -liberty build/pdk/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr build/ofdm_top_sky130.v
