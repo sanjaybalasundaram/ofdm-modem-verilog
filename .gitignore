@@ -21,3 +21,6 @@ runs/
 # Generated simulation outputs
 sim/
 
+
+# Plots written by python_model/ofdm_model.py
+python_model/*.png
