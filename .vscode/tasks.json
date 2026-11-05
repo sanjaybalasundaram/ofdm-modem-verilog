@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run OFDM simulation",
+      "type": "shell",
+      "command": "./run.sh",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run OFDM simulation (full BER sweep)",
+      "type": "shell",
+      "command": "./run.sh full",
+      "problemMatcher": []
+    }
+  ]
+}

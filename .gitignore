@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Simulation outputs
+*.vcd
+*.fst
+*.vvp
+a.out
+
+# Synthesis / build outputs
+build/
+runs/
+*.log
+*.json.bak
+
+# OS
+.DS_Store
+
+# Generated simulation outputs
+sim/
+
